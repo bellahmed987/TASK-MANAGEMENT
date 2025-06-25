@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+
+    background-color: rgb(46, 184, 211);
+  
+}
+.footer{
+   color: rgb(227, 110, 14);
+   background-color: rgb(50, 144, 206);
+   position: fixed;
+   bottom: 0;
+text-align: center;
+width: 100%;
+
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #2c2c3a;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff914d;
+  }
+  
+  .todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+  
+  .todo-table th,
+  .todo-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+  
+  .todo-table th {
+    background-color: #393955;
+    color: #ffcc70;
+  }
+  
+  .todo-table tr:nth-child(even) {
+    background-color: #2a2a3b;
+  }
+  
+  .todo-table tr:hover {
+    background-color: #383858;
+  }
+  .addtodo {
+    background-color: #4CAF50;       /* Green background */
+    color: white;                    /* White text */
+    padding: 10px 20px;              /* Size */
+    border: none;                    /* No border */
+    border-radius: 8px;              /* Rounded corners */
+    font-size: 16px;                 /* Text size */
+    font-weight: 600;                /* Slightly bold */
+    cursor: pointer;                 /* Pointer on hover */
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+  }
+  
+  .addtodo:hover {
+    background-color: #45a049;       /* Darker green on hover */
+    transform: translateY(-8px);     /* Slight lift on hover */
+  }.addtodo-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #1e1e2f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .addtodo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .addtodo-form input,
+  .addtodo-form select {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #2c2c3e;
+    color: white;
+  }
+  
+  .addtodo-form input::placeholder {
+    color: #aaa;
+  }
+  
+  .addtodo-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .addtodo-btn:hover {
+    background-color: #45a049;
+  }
+.updatetodo{
+  background-color: #15e49c;       /* Green background */
+  color: white;                    /* White text */
+  padding: 4px 4px;              /* Size */
+  border: none;                    /* No border */
+  border-radius: 8px;              /* Rounded corners */
+  font-size: 16px;                 /* Text size */
+  font-weight: 600;                /* Slightly bold */
+  cursor: pointer;                 /* Pointer on hover */
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+  margin-top: 8px;
+
+}  .updatetodo:hover {
+  background-color: #16e06e;       /* Darker green on hover */
+  transform: translateY(-2px);     /* Slight lift on hover */
+}
+  .deletetodo{
+    background-color: #c70e0b;       /* Green background */
+    color: white;                    /* White text */
+    padding: 4px 4px;              /* Size */
+    border: none;                    /* No border */
+    border-radius: 8px;              /* Rounded corners */
+    font-size: 16px;                 /* Text size */
+    font-weight: 600;                /* Slightly bold */
+    cursor: pointer;                 /* Pointer on hover */
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+    margin-top: 8px;
+     
+  }.deletetodo:hover {
+    background-color: #ed1616;       /* Darker green on hover */
+    transform: translateY(-2px);     /* Slight lift on hover */
+  }.opbtn{
+    display: flex;
+    justify-content: center;
+    
+  } .comtodo{
+    background-color: #17e2d8;       /* Green background */
+    color: white;                    /* White text */
+    padding: 4px 4px;              /* Size */
+    border: none;                    /* No border */
+    border-radius: 8px;              /* Rounded corners */
+    font-size: 16px;                 /* Text size */
+    font-weight: 600;                /* Slightly bold */
+    cursor: pointer;                 /* Pointer on hover */
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow */
+    margin-top: 8px;
+     
+  }.comtodo:hover {
+    background-color: #16dbedb9;       /* Darker green on hover */
+    transform: translateY(-2px);     /* Slight lift on hover */
+  }
+  button{
+    margin-right: 7px;
+  }
