@@ -1,4 +1,14 @@
 package com.example.Todo.exception;
 
-public class todoapiexception {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.http.HttpStatus;
+@Getter
+@AllArgsConstructor
+
+public class todoapiexception extends RuntimeException
+{
+    private HttpStatus status;
+    private String message;
 }
