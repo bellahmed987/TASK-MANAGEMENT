@@ -5,7 +5,12 @@
 }
 .header{
 
-    background-color: rgb(46, 184, 211);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ae43ccd1; /* dark background */
+  padding: 1rem 2rem;
+  font-family: Arial, sans-serif;
   
 }
 .footer{
@@ -36,7 +41,20 @@ body {
   h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: #ff914d;
+    color: #f8721e;
+  }
+  .regester {
+    color: #ffffffaf; /* white text */
+    text-decoration: none; /* remove underline */
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  .regester:hover {
+    color: #ffa500; /* orange on hover */
+    border-bottom: 2px solid #ffa500; /* simulate underline only on hover */
   }
   
   .todo-table {
@@ -182,4 +200,52 @@ body {
   }
   button{
     margin-right: 7px;
+  }.form-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    background-color: #1e1e2f;
+    padding: 2rem;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
   }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffa500;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #ffa500;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background-color: #ff8c00;
+  }
+  

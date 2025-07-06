@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom'
-import { completetodo, deletetodo, incompletetodo } from '../service/service';
+import { completetodo, deletetodo, gettodoall, incompletetodo } from '../service/service';
 
 
 function listtodo() {
-  const response=useLoaderData();
-  const gettodoall=response.data
+  
   const [todo,setodo]=useState([]);
   const navigate=useNavigate();
  
   useEffect(()=>{
-setodo(gettodoall)
-  },[gettodoall])
+listtodo()
+  },[])
+  function listtodo(){
+    gettodoall().then((result) => {
+      setodo(result.data)
+    }).catch((err) => {
+      console.log(err)
+      
+    });
+  }
   function addtodo(){
 navigate('/addtodo')
   }
@@ -48,19 +55,17 @@ window.location.reload()
           <th>Actios</th>
         </tr>
       </thead>
-      <tbody>    {todo.map((todo) => (
+      <tbody>{todo.map((todo) => (
             <tr key={todo.id}>
               <td>{todo.title}</td>
               <td>{todo.description}</td>
               <td>{todo.completed ? "Yes" : "No"}</td>
-            <div className='opbtn'>  <button className="updatetodo" onClick={()=>updatetodo(todo.id)}>UPDATE</button>
+            <td className='opbtn'>  <button className="updatetodo" onClick={()=>updatetodo(todo.id)}>UPDATE</button>
               <button className="deletetodo" onClick={()=>deltodo(todo.id)}>DELETE</button>
               <button className="comtodo" onClick={()=>comtodo(todo.id)}>Complete</button>
               <button className="comtodo" onClick={()=>incomtodo(todo.id)}>INComplete</button>
-              </div> </tr>
-          ))}
-        
-      </tbody>
+              </td> </tr>
+          ))}</tbody>
     </table>
   </div>
     

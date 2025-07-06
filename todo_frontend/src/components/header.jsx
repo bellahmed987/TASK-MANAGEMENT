@@ -1,11 +1,15 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function header() {
-  const navigate=useNavigate()
+  
   return (
     <div className="header">
-      <h1  onClick={()=>navigate("/")}>TODO MANAGEMENT APPLICATION</h1>
+       <NavLink to={"/"} className="regester">TODO MANAGEMENT APPLICATION</NavLink>
+      <div>
+      <NavLink to={"/login"} className="regester">LOGIN</NavLink>
+      <NavLink to={"/regester"} className="regester">REGESTER</NavLink>
+      </div>
     </div>
   )
 }
