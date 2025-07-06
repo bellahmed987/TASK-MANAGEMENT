@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { loginapicall, storetoken } from '../service/authservice';
+import { loginapicall, storetoken,savelogedinuser } from '../service/authservice';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -7,19 +7,20 @@ function Login() {
   const [password, setPassword] = useState('');
   const navigator = useNavigate();
 
-  function handlesubmit(e) {
+ async  function handlesubmit(e) {
     e.preventDefault();
 
     const loginData = { usernameoremail, password };
     console.log("Login payload:", loginData);
 
-    loginapicall(usernameoremail, password)
+  await  loginapicall(usernameoremail, password)
       .then((result) => {
         console.log("Login successful:", result.data);
+      
         const token = "Basic " + window.btoa(usernameoremail + ":" + password);
         storetoken(token); 
-        
-        navigator("/");
+        savelogedinuser(usernameoremail)
+        navigator("/todo");
       })
       .catch((err) => {
         console.log("Login failed:", err.response?.data || err.message);
